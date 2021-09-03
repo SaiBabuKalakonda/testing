@@ -120,15 +120,7 @@ public class AppTest {
             assertEquals(1, contactManager.getAllContacts().size());
         }
 
-        @DisplayName("CSV File Source Case - Phone Number should match the required Format")
-        @ParameterizedTest
-        @CsvFileSource(resources = "/data.csv")
-        public void shouldTestPhoneNumberFormatUsingCSVFileSource(String phoneNumber) {
-            contactManager.addContact("John", "Doe", phoneNumber);
-            assertFalse(contactManager.getAllContacts().isEmpty());
-            assertEquals(1, contactManager.getAllContacts().size());
-        }
-    }
+
 
     @DisplayName("Method Source Case - Phone Number should match the required Format")
     @ParameterizedTest
